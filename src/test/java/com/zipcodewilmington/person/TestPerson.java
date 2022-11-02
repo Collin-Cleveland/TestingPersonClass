@@ -12,6 +12,12 @@ public class TestPerson {
         // Given
         String expectedName = "";
         Integer expectedAge = Integer.MAX_VALUE;
+        String expectedHairColor = "Brown";
+        String expectedEyeColor = "Brown";
+        int expectedHeight = 75;
+        int expectedWeight = 190;
+        String expectedFavColor = "Green";
+
 
         // When
         Person person = new Person();
@@ -93,6 +99,76 @@ public class TestPerson {
 
         // Then
         Integer actual = person.getAge();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHairColor() {
+        // Given
+        Person person = new Person();
+        String expected = "Yellow";
+
+        // When
+        person.setHairColor(expected);
+        String actual = person.getHairColor();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetEyeColor() {
+        // Given
+        Person person = new Person();
+        String expected = "Rainbow";
+
+        // When
+        person.setEyeColor(expected);
+        String actual = person.getEyeColor();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHeight() {
+        // Given
+        Person person = new Person();
+        int expected = 100;
+
+        // When
+        person.setHeight(expected);
+        int actual = person.getHeight();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetWeight() {
+        // Given
+        Person person = new Person();
+        int expected = 200;
+
+        // When
+        person.setWeight(expected);
+        int actual = person.getWeight();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFavColor() {
+        // Given
+        Person person = new Person();
+        String expected = "Clear";
+
+        // When
+        person.setFavColor(expected);
+        String actual = person.getFavColor();
+
+        // Then
         Assert.assertEquals(expected, actual);
     }
 }
